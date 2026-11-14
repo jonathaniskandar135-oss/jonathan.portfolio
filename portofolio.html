@@ -1,0 +1,1174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jonathan Christiadi Iskandar | Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --black: #151515;
+    --dark: #202020;
+    --ivory: #f4f1e9;
+    --white: #fffefa;
+    --gray: #99958c;
+    --line: #d9d5cb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--ivory);
+    color: var(--black);
+    font-family: 'DM Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    padding: 100px 9%;
+    scroll-margin-top: 80px;
+}
+
+.section-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--gray);
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 500;
+    line-height: 1.05;
+    margin-bottom: 40px;
+}
+
+button, a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* NAVBAR */
+nav {
+    min-height: 80px;
+    padding: 18px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--ivory);
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 23px;
+    list-style: none;
+}
+
+nav ul a {
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+nav ul a:hover {
+    color: var(--gray);
+}
+
+/* HERO */
+.hero {
+    min-height: 680px;
+    padding: 100px 9%;
+    background: var(--black);
+    color: var(--ivory);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-label {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #aaa;
+    margin-bottom: 35px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: clamp(48px, 9vw, 115px);
+    line-height: 1.02;
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 span {
+    color: #aaa69d;
+}
+
+.hero-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+    margin-top: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-bottom p {
+    color: #bcbab4;
+    max-width: 530px;
+    line-height: 1.9;
+    font-size: 14px;
+}
+
+.outline-btn {
+    display: inline-block;
+    border: 1px solid #aaa;
+    color: white;
+    padding: 16px 25px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    transition: .3s;
+    white-space: nowrap;
+}
+
+.outline-btn:hover {
+    background: var(--ivory);
+    color: var(--black);
+}
+
+/* ABOUT */
+.about-grid {
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: 75px;
+    align-items: center;
+}
+
+.profile-image {
+    height: 480px;
+    background: #252525;
+    overflow: hidden;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-content p {
+    color: #66635d;
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 18px;
+}
+
+.about-info {
+    margin-top: 35px;
+    border-top: 1px solid var(--line);
+}
+
+.info-row {
+    padding: 17px 0;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    font-size: 12px;
+}
+
+.info-row span {
+    color: #888;
+    letter-spacing: 1px;
+}
+
+.info-row b {
+    text-align: right;
+}
+
+/* EDUCATION */
+.education {
+    background: #e9e5db;
+}
+
+.edu-item {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 25px;
+    padding: 32px 0;
+    border-top: 1px solid #c8c3b8;
+}
+
+.edu-year {
+    font-size: 12px;
+    color: #777;
+}
+
+.edu-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.edu-item p {
+    color: #777;
+    font-size: 13px;
+}
+
+/* SKILLS */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.skill-card {
+    min-height: 180px;
+    padding: 30px;
+    border: 1px solid var(--line);
+    transition: .3s;
+}
+
+.skill-card:hover {
+    background: var(--black);
+    color: white;
+    transform: translateY(-5px);
+}
+
+.skill-card span {
+    font-size: 11px;
+    color: #999;
+}
+
+.skill-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    margin: 25px 0 12px;
+    font-weight: 500;
+}
+
+.skill-card p {
+    color: #888;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* EXPERIENCE */
+.experiences {
+    background: var(--black);
+    color: var(--ivory);
+}
+
+.experiences .section-label {
+    color: #999;
+}
+
+.experience-list {
+    border-top: 1px solid #444;
+}
+
+.experience-card {
+    display: grid;
+    grid-template-columns: 65px 1fr;
+    gap: 25px;
+    padding: 35px 0;
+    border-bottom: 1px solid #444;
+    transition: .3s;
+}
+
+.experience-card:hover {
+    padding-left: 12px;
+}
+
+.exp-number {
+    color: #777;
+    font-size: 13px;
+}
+
+.experience-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.experience-card p {
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.9;
+    max-width: 750px;
+}
+
+.exp-type {
+    display: inline-block;
+    color: #aaa;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+/* CERTIFICATES */
+.certificates {
+    background: #e9e5db;
+}
+
+.certificate-intro {
+    color: #777;
+    line-height: 1.9;
+    font-size: 14px;
+    max-width: 550px;
+    margin-top: -15px;
+    margin-bottom: 45px;
+}
+
+.certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.certificate-card {
+    background: var(--white);
+    border: 1px solid #d5d0c5;
+    transition: .3s;
+    overflow: hidden;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+}
+
+.certificate-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: #222;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.certificate-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.certificate-info {
+    padding: 25px;
+}
+
+.certificate-info span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #999;
+}
+
+.certificate-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 500;
+    margin: 14px 0;
+}
+
+.certificate-info p {
+    font-size: 12px;
+    line-height: 1.9;
+    color: #777;
+}
+
+.certificate-info small {
+    display: block;
+    padding-top: 17px;
+    margin-top: 18px;
+    border-top: 1px solid var(--line);
+    font-size: 11px;
+}
+
+/* ACTIVITY GALLERY */
+.activities {
+    background: var(--black);
+    color: var(--ivory);
+}
+
+.activities .section-label {
+    color: #999;
+}
+
+.activity-intro {
+    color: #aaa;
+    max-width: 550px;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-top: -15px;
+    margin-bottom: 45px;
+}
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.activity-card {
+    overflow: hidden;
+}
+
+.activity-image {
+    width: 100%;
+    height: 300px;
+    background: #292929;
+    overflow: hidden;
+}
+
+.activity-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.activity-card:hover img {
+    transform: scale(1.04);
+}
+
+.activity-info {
+    padding: 20px 0;
+    border-bottom: 1px solid #444;
+}
+
+.activity-info span {
+    font-size: 10px;
+    color: #999;
+    letter-spacing: 2px;
+}
+
+.activity-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 500;
+    margin: 12px 0;
+}
+
+.activity-info p {
+    font-size: 12px;
+    color: #aaa;
+    line-height: 1.8;
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+    padding: 130px 9%;
+}
+
+.contact h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(55px, 9vw, 100px);
+    line-height: 1;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.contact p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.contact-btn {
+    display: inline-block;
+    background: var(--black);
+    color: white;
+    padding: 17px 35px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    transition: .3s;
+}
+
+.contact-btn:hover {
+    background: #555;
+}
+
+/* FOOTER */
+footer {
+    background: var(--black);
+    color: #aaa;
+    padding: 30px 9%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+    nav {
+        padding: 20px 5%;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    nav ul a {
+        font-size: 9px;
+    }
+
+    section {
+        padding: 80px 6%;
+    }
+
+    .hero {
+        padding: 90px 6%;
+    }
+
+    .about-grid {
+        gap: 35px;
+    }
+}
+
+@media(max-width: 650px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        font-size: clamp(42px, 11vw, 70px);
+    }
+
+    .hero-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .about-grid,
+    .certificate-grid,
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-image {
+        height: 400px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .edu-item {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .experience-card {
+        grid-template-columns: 35px 1fr;
+    }
+
+    .activity-image {
+        height: 260px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media(max-width: 400px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-row {
+        font-size: 10px;
+    }
+}
+
+/* ANIMATION */
+@media(prefers-reduced-motion: no-preference) {
+    .reveal {
+        animation: appear .8s ease both;
+    }
+
+    @keyframes appear {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="logo">Jooo.</div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experiences">Experience</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#activities">Activities</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HOME -->
+<header class="hero" id="home">
+    <div class="hero-label">
+        PERSONAL PORTFOLIO / 2026
+    </div>
+
+    <h1>
+        JONATHAN<br>
+        <span>CHRISTIADI<br>ISKANDAR.</span>
+    </h1>
+
+    <div class="hero-bottom">
+        <p>
+            Greetings! I am an ambitious and motivated student
+            with a strong passion for learning, personal growth,
+            and academic excellence. Through my experiences,
+            achievements, and dedication, I aspire to pursue
+            higher education and contribute positively to the
+            university community.
+        </p>
+
+        <a href="#about" class="outline-btn">
+            EXPLORE MY PORTFOLIO ↗
+        </a>
+    </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="section-label">01 / ABOUT ME</div>
+
+    <div class="about-grid">
+
+        <div class="profile-image">
+            <img src="profile.jpg" alt="Jonathan's portrait">
+        </div>
+
+        <div class="about-content">
+            <h2 class="section-title">
+                A LITTLE<br>ABOUT ME.
+            </h2>
+
+            <p>
+                My name is Jonathan Christiadi Iskandar.
+                I am a student at SMA Don Bosco Padang
+                who enjoys learning new things, developing
+                creativity, and exploring different opportunities.
+            </p>
+
+            <p>
+                I believe that every experience is an opportunity
+                to grow. I am particularly interested in mathematics,
+                music, leadership, and personal development.
+            </p>
+
+            <p>
+                My goal is to continue my education at a university
+                where I can expand my knowledge, develop my potential,
+                and contribute positively to society.
+            </p>
+
+            <div class="about-info">
+                <div class="info-row">
+                    <span>FULL NAME</span>
+                    <b>Jonathan Christiadi Iskandar</b>
+                </div>
+
+                <div class="info-row">
+                    <span>OCCUPATION</span>
+                    <b>High School Student</b>
+                </div>
+
+                <div class="info-row">
+                    <span>SCHOOL</span>
+                    <b>SMA Don Bosco Padang</b>
+                </div>
+
+                <div class="info-row">
+                    <span>INTEREST</span>
+                    <b>Mathematics & Music</b>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="education" id="education">
+    <div class="section-label">02 / EDUCATION</div>
+    <h2 class="section-title">ACADEMIC<br>JOURNEY.</h2>
+
+    <div class="edu-item">
+        <div class="edu-year">2024 — 2027</div>
+        <div>
+            <h3>Senior High School</h3>
+            <p>SMA DON BOSCO PADANG</p>
+        </div>
+    </div>
+
+    <div class="edu-item">
+        <div class="edu-year">2021 — 2024</div>
+        <div>
+            <h3>Junior High School</h3>
+            <p>SMP KRISTEN KALAM KUDUS PADANG</p>
+        </div>
+    </div>
+
+    <div class="edu-item">
+        <div class="edu-year">2015 — 2021</div>
+        <div>
+            <h3>Elementary School</h3>
+            <p>SD KRISTEN KALAM KUDUS PADANG</p>
+        </div>
+    </div>
+
+    <div class="edu-item">
+        <div class="edu-year">2015</div>
+        <div>
+            <h3>Kindergarten</h3>
+            <p>TK KRISTEN KALAM KUDUS PADANG</p>
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <div class="section-label">03 / PERSONAL DEVELOPMENT</div>
+    <h2 class="section-title">SKILLS &<br>INTERESTS.</h2>
+
+    <div class="skills-grid">
+
+        <div class="skill-card">
+            <span>01</span>
+            <h3>Creativity</h3>
+            <p>Creative thinking and generating new ideas.</p>
+        </div>
+
+        <div class="skill-card">
+            <span>02</span>
+            <h3>Communication</h3>
+            <p>Sharing ideas and communicating effectively.</p>
+        </div>
+
+        <div class="skill-card">
+            <span>03</span>
+            <h3>Leadership</h3>
+            <p>Taking responsibility and leading a team.</p>
+        </div>
+
+        <div class="skill-card">
+            <span>04</span>
+            <h3>Mathematics</h3>
+            <p>Logical thinking and analytical problem solving.</p>
+        </div>
+
+        <div class="skill-card">
+            <span>05</span>
+            <h3>Teamwork</h3>
+            <p>Collaborating and working towards shared goals.</p>
+        </div>
+
+        <div class="skill-card">
+            <span>06</span>
+            <h3>Music</h3>
+            <p>Musical performance and creative expression.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experiences" id="experiences">
+    <div class="section-label">04 / EXPERIENCE & ACHIEVEMENTS</div>
+    <h2 class="section-title">MY<br>EXPERIENCES.</h2>
+
+    <div class="experience-list">
+
+        <div class="experience-card">
+            <div class="exp-number">01</div>
+            <div>
+                <span class="exp-type">Leadership / Organization</span>
+                <h3>Head of ICT Division — Student Council (OSIS)</h3>
+                <p>
+                    Led the ICT division in managing audio systems,
+                    sound engineering, and technical operations
+                    for school events.
+                </p>
+            </div>
+        </div>
+
+        <div class="experience-card">
+            <div class="exp-number">02</div>
+            <div>
+                <span class="exp-type">Organization / Finance</span>
+                <h3>Staff of Fundraising Division — Student Council (OSIS)</h3>
+                <p>
+                    Collaborated in managing event booths,
+                    marketing products, and handling customer
+                    transactions to support organizational
+                    financial targets.
+                </p>
+            </div>
+        </div>
+
+        <div class="experience-card">
+            <div class="exp-number">03</div>
+            <div>
+                <span class="exp-type">Community Service</span>
+                <h3>Community Service Volunteer — Buddha Tzu Chi Foundation</h3>
+                <p>
+                    Participated in charity drives and aid
+                    distribution programs, assisting communities
+                    through social service activities.
+                </p>
+            </div>
+        </div>
+
+        <div class="experience-card">
+            <div class="exp-number">04</div>
+            <div>
+                <span class="exp-type">Music / Volunteering</span>
+                <h3>Church Music Ministry Volunteer</h3>
+                <p>
+                    Contributed musical accompaniment for
+                    weekly church services and special events,
+                    demonstrating discipline and teamwork.
+                </p>
+            </div>
+        </div>
+
+        <div class="experience-card">
+            <div class="exp-number">05</div>
+            <div>
+                <span class="exp-type">Competition / Music</span>
+                <h3>1st Place — Drum Competition</h3>
+                <p>
+                    Won first place in a school-level drum
+                    competition organized by Wahana Musik
+                    Padang (Yamaha Music School).
+                </p>
+            </div>
+        </div>
+
+        <div class="experience-card">
+            <div class="exp-number">06</div>
+            <div>
+                <span class="exp-type">Competition / Film</span>
+                <h3>3rd Place — FLS3N Short Film Competition 2026</h3>
+                <p>
+                    Awarded third place among high schools
+                    across Padang City as a featured actor
+                    in the short film competition.
+                </p>
+            </div>
+        </div>
+
+        <div class="experience-card">
+            <div class="exp-number">07</div>
+            <div>
+                <span class="exp-type">Performing Arts / Music</span>
+                <h3>Best Performing Ensemble — Skola Art Fest 2025</h3>
+                <p>
+                    Selected among the top five performing
+                    schools, serving as a live background
+                    musician for a theatrical performance.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CERTIFICATES -->
+<section class="certificates" id="certificates">
+    <div class="section-label">05 / DOCUMENTATION</div>
+    <h2 class="section-title">CERTIFICATES<br>& AWARDS.</h2>
+
+    <p class="certificate-intro">
+        A collection of certificates, awards, and recognitions
+        that represent my academic journey, achievements,
+        and personal development.
+    </p>
+
+    <div class="certificate-grid">
+
+        <!-- COPY THIS CARD FOR MORE CERTIFICATES -->
+
+        <div class="certificate-card">
+            <div class="certificate-image">
+                <img src="certificate1.jpg" alt="Certificate 1">
+            </div>
+
+            <div class="certificate-info">
+                <span>CERTIFICATE 01</span>
+                <h3>Drum Competition — 1st Place</h3>
+                <p><b>Organizer:</b> Wahana Musik Padang</p>
+                <p>
+                    Recognition for achieving first place
+                    in a school-level drum competition.
+                </p>
+                <small>YEAR — [ENTER YEAR]</small>
+            </div>
+        </div>
+
+        <div class="certificate-card">
+            <div class="certificate-image">
+                <img src="certificate2.jpg" alt="Certificate 2">
+            </div>
+
+            <div class="certificate-info">
+                <span>CERTIFICATE 02</span>
+                <h3>FLS3N — 3rd Place</h3>
+                <p><b>Organizer:</b> FLS3N Padang City</p>
+                <p>
+                    Recognition for participating in
+                    the short film competition.
+                </p>
+                <small>YEAR — 2026</small>
+            </div>
+        </div>
+
+        <div class="certificate-card">
+            <div class="certificate-image">
+                <img src="certificate3.jpg" alt="Certificate 3">
+            </div>
+
+            <div class="certificate-info">
+                <span>CERTIFICATE 03</span>
+                <h3>Skola Art Fest 2025</h3>
+                <p><b>Organizer:</b> West Sumatra Cultural Office</p>
+                <p>
+                    Recognition for participation in
+                    a theatrical performing arts festival.
+                </p>
+                <small>YEAR — 2025</small>
+            </div>
+        </div>
+
+        <div class="certificate-card">
+            <div class="certificate-image">
+                <img src="certificate4.jpg" alt="Certificate 4">
+            </div>
+
+            <div class="certificate-info">
+                <span>CERTIFICATE 04</span>
+                <h3>Additional Certificate</h3>
+                <p><b>Organizer:</b> Organization Name</p>
+                <p>
+                    Write a description of your activity,
+                    achievement, and experience.
+                </p>
+                <small>YEAR — 2026</small>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ACTIVITIES -->
+<section class="activities" id="activities">
+    <div class="section-label">06 / PHOTO GALLERY</div>
+    <h2 class="section-title">ACTIVITIES &<br>DOCUMENTATION.</h2>
+
+    <p class="activity-intro">
+        Moments, experiences, and activities that
+        have shaped my personal growth, leadership,
+        creativity, and community involvement.
+    </p>
+
+    <div class="activity-grid">
+
+        <div class="activity-card">
+            <div class="activity-image">
+                <img src="activity1.jpg" alt="Student Council Activity">
+            </div>
+            <div class="activity-info">
+                <span>LEADERSHIP / ORGANIZATION</span>
+                <h3>Student Council Activities</h3>
+                <p>
+                    Documentation of my involvement in
+                    student council activities and school events.
+                </p>
+            </div>
+        </div>
+
+        <div class="activity-card">
+            <div class="activity-image">
+                <img src="activity2.jpg" alt="Community Service">
+            </div>
+            <div class="activity-info">
+                <span>COMMUNITY SERVICE</span>
+                <h3>Social & Volunteer Activities</h3>
+                <p>
+                    Moments from charity programs and
+                    community service activities.
+                </p>
+            </div>
+        </div>
+
+        <div class="activity-card">
+            <div class="activity-image">
+                <img src="activity3.jpg" alt="Music Performance">
+            </div>
+            <div class="activity-info">
+                <span>MUSIC / PERFORMANCE</span>
+                <h3>Music Ministry & Performances</h3>
+                <p>
+                    Documentation of musical performances
+                    and church service activities.
+                </p>
+            </div>
+        </div>
+
+        <div class="activity-card">
+            <div class="activity-image">
+                <img src="activity4.jpg" alt="Competition">
+            </div>
+            <div class="activity-info">
+                <span>COMPETITION / ACHIEVEMENT</span>
+                <h3>Competitions & Awards</h3>
+                <p>
+                    Capturing my participation and achievements
+                    in various competitions.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <div class="section-label">07 / GET IN TOUCH</div>
+
+    <h2>LET'S<br>CONNECT.</h2>
+
+    <p>
+        Thank you for taking the time to explore my portfolio.
+        I look forward to new opportunities and experiences.
+    </p>
+
+  
+
+            <a href="https://www.instagram.com/jojoooci/"
+               target="_blank" class="contact-card">
+                <span class="contact-icon"><span class="contact-icon">
+    <svg viewBox="0 0 24 24" width="27" height="27"
+         fill="none" stroke="currentColor"
+         stroke-width="1.8">
+        <rect x="3" y="3" width="18" height="18" rx="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/>
+    </svg>
+</span></span>
+                <div>
+                    <h3>Instagram</h3>
+                    <p>@jojoooci</p>
+                </div>
+                <span class="contact-arrow">↗</span>
+            </a>
+
+            <a href="https://wa.me/6285365009008"
+               target="_blank" class="contact-card">
+                <span class="contact-icon"><span class="contact-icon">
+    <svg viewBox="0 0 24 24" width="27" height="27"
+         fill="none" stroke="currentColor"
+         stroke-width="1.8" stroke-linecap="round"
+         stroke-linejoin="round">
+        <path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.7a8.5 8.5 0 1 1 16.3-3.8Z"/>
+        <path d="M8.5 8.5c.4-.8.8-.7 1.1-.7l.7 1.7-.8 1c.7 1.5 1.8 2.5 3.3 3.2l.9-.9 1.7.8c.1.3.1.7-.5 1.2-.7.6-1.7.7-3.4-.1-2-.9-3.5-2.4-4.2-4.1-.7-1.6-.3-2.6.2-3.1Z"/>
+    </svg>
+</span></span>
+                <div>
+                    <h3>WhatsApp</h3>
+                    <p>Let's have a conversation</p>
+                </div>
+                <span class="contact-arrow">↗</span>
+            </a>
+
+            <a 
+               class="contact-card">
+                <span class="contact-icon">✉</span>
+                <div>
+                    <h3>Email</h3>
+                    <p>jonathan.iskandar135@gmail.com</p>
+                </div>
+                <span class="contact-arrow">↗</span>
+            </a>
+
+        </div>
+
+        <div class="contact-footer">
+            <p>THANK YOU FOR VISITING MY PORTFOLIO.</p>
+        </div>
+
+    </div>
+</section>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <span>© 2026 JONATHAN CHRISTIADI ISKANDAR</span>
+    <span>PERSONAL ACADEMIC PORTFOLIO</span>
+</footer>
+
+</body>
+</html>
